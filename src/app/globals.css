@@ -2,28 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-bg-primary: #F9F9FB;
+  --color-bg-secondary: #deddde;
+  --color-bg-third: #f1f1f1;
+  --color-text-primary: #3F4451;
+  --color-text-secondary: #7E8690;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-bg-primary: #272932;
+    --color-bg-secondary: #343741;
+    --color-bg-third: #3b414c;
+    --color-text-primary: #F9F9FB;
+    --color-text-secondary: #B8BBC0;
   }
 }
 
+[data-theme="light"] {
+  --color-bg-primary: #F9F9FB;
+  --color-bg-secondary: #deddde;
+  --color-bg-third: #f1f1f1;
+  --color-text-primary: #3F4451;
+  --color-text-secondary: #7E8690;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: #272932;
+  --color-bg-secondary: #343741;
+  --color-bg-third: #3b414c;
+  --color-text-primary: #F9F9FB;
+  --color-text-secondary: #B8BBC0;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 @layer utilities {
@@ -31,3 +50,5 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Navbar */

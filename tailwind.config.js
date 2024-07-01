@@ -5,8 +5,27 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        roboto: ['var(--font-roboto)'],
+        lato: ['var(--font-lato)'],
+      },
+      colors: {
+        primary: {
+          "DEFAULT": "var(--color-bg-primary)",
+          "100": "var(--color-bg-primary)",
+          "200": "var(--color-bg-secondary)",
+          "300": "var(--color-bg-third)"
+        },
+        secondary: {
+          "DEFAULT": "var(--color-text-primary)",
+          "100": "var(--color-text-primary)",
+          "200": "var(--color-text-secondary)"
+        }
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,5 +33,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };
