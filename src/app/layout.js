@@ -1,8 +1,7 @@
 import { Inter, Roboto, Lato } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from 'next-themes'
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 
 const roboto = Roboto({
   subsets: ['latin']
@@ -33,9 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={roboto.className}>
         <ThemeProvider attribute="class" enableSystem={false}>
-          <Navbar />
           {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

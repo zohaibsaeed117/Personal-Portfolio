@@ -4,12 +4,12 @@ import React from 'react'
 const Logo = ({ path, name }) => {
 
     return (
-        <div className='mx-auto flex items-center justify-center flex-col gap-y-2  '>
+        <div className='mx-auto flex items-center justify-center flex-col gap-y-2 cursor-pointer transition ease-in-out duration-300  hover:scale-[1.12] '>
             <Image src={`/skills/${path}.png`}
                 alt={name}
                 height={100}
                 width={100}
-                className='object-contain aspect-square h-12 md:h-20 sm:h-16 lg:h-24'
+                className='object-contain aspect-square h-12 md:h-20 sm:h-16 lg:h-24 '
                 blurDataURL='true'
                 placeholder='blur'
             />

@@ -1,16 +1,17 @@
+"use client"
 import React from 'react'
 import { CiLocationOn } from "react-icons/ci";
 import { GoDotFill } from "react-icons/go";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import StyledImage from './StyledImage';
-
 const Hero = () => {
+
   return (
     <div className='flex items-center justify-between mt-4 flex-col-reverse pb-10 lg:flex-row lg:justify-around lg:my-10 lg:py-10'>
       <div className='w-[60%] mt-8 lg:mt-0'>
         <h1 className="text-xl font-semibold text-secondary-100 md:text-4xl text-center lg:text-6xl md:text-left">
-          Hello, I'm Zohaib! 👋
+          Hello, I'm Zohaib 👋
         </h1>
         <p className="text-base mt-6 text-secondary-200 text-center lg:text-lg lg:text-left">
           I'm a web developer specializing in the MERN stack (React.js, Node.js, Express.js, MongoDB) with a passion for creating fast, accessible, and visually appealing web applications. Over the past two years, I've honed my skills in React.js and Tailwind CSS, while actively learning Next.js. I continuously push the boundaries of modern web technologies to deliver exceptional digital experiences.

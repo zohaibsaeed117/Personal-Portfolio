@@ -17,6 +17,9 @@ const ThemeController = () => {
             document.querySelector('.theme-controller').checked = true
             document.documentElement.setAttribute('data-theme', "dark")
         }
+        else {
+            document.documentElement.setAttribute('data-theme', "light")
+        }
     }, [])
     return (
         <label className="swap swap-rotate">

@@ -1,15 +1,17 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Badge from './Badge'
 import { MdOutlineMailOutline, MdOutlinePhone } from 'react-icons/md'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
+import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi'
 
 const Contact = () => {
+    const [phoneCopied, setPhoneCopied] = useState(false);
+    const [emailCopied, setEmailCopied] = useState(false);
     const form = useRef();
-
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs
@@ -37,19 +39,44 @@ const Contact = () => {
 
     return (
         <div id="contact" className='flex w-full items-center justify-center flex-col bg-primary-200 py-10 gap-y-6'>
-            <Toaster />
+            <Toaster toastOptions={{
+                style: {
+                    backgroundColor: "var(--color-bg-third)",
+                    color: "var(--color-text-primary)"
+                }
+            }} />
             <Badge title={"Get In Touch"} style={"my-4"} />
             <p className='text-base text-center text-secondary-200 my-4 px-4 sm:text-left'>What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.</p>
             <div className='flex flex-col w-full items-center justify-center mx-10 lg:flex-row'>
                 <div className='w-full lg:w-1/2 flex items-center justify-center flex-col'>
                     <div className='flex items-center justify-center gap-y-4 flex-col'>
-                        <div className='flex items-center justify-center gap-x-8 '>
+                        <div className='flex items-center justify-center gap-x-2 lg:gap-x-8 '>
                             <MdOutlineMailOutline size={40} />
                             <p className='text-secondary-100 text-base font-semibold lg:text-2xl'>zohaib.saeed1259@gmail.com</p>
+                            <button onClick={async () => {
+                                navigator.clipboard.writeText("zohaib.saeed1259@gmail.com")
+                                setEmailCopied(true);
+                                toast.success("Text Copied Successfully", {
+                                    position: "bottom-center"
+                                })
+                                setTimeout(() => {
+                                    setEmailCopied(false);
+                                }, [5000])
+                            }}>{emailCopied ? <HiOutlineClipboardCheck size={40} /> : <HiOutlineClipboard size={40} />}</button>
                         </div>
-                        <div className='flex items-center justify-center gap-x-8'>
+                        <div className='flex items-center justify-center gap-x-2 lg:gap-x-8'>
                             <MdOutlinePhone size={40} />
                             <p className='text-secondary-100 text-base font-semibold lg:text-2xl'>+92 3034859856</p>
+                            <button onClick={async () => {
+                                navigator.clipboard.writeText("+92 3034859856")
+                                setPhoneCopied(true);
+                                toast.success("Text Copied Successfully", {
+                                    position: "bottom-center"
+                                })
+                                setTimeout(() => {
+                                    setPhoneCopied(false);
+                                }, [5000])
+                            }}>{phoneCopied ? <HiOutlineClipboardCheck size={40} /> : <HiOutlineClipboard size={40} />}</button>
                         </div>
                     </div>
                     <p className='text-base text-center text-secondary-200 my-4 px-4 sm:text-left'>You may also find me on these platforms</p>
