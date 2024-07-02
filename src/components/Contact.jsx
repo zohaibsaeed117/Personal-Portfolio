@@ -14,6 +14,51 @@ const Contact = () => {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
+        const nameField = form.current.elements.user_name;
+        const emailField = form.current.elements.user_email;
+        const subjectField = form.current.elements.subject;
+        const messageField = form.current.elements.message;
+
+        // Perform validation checks
+        if (!nameField.value.trim()) {
+            toast.error('Name is required', {
+                duration: 4000,
+                position: 'top-center',
+            });
+            return;
+        }
+
+        if (!emailField.value.trim()) {
+            toast.error('Email is required', {
+                duration: 4000,
+                position: 'top-center',
+            });
+            return;
+        }
+
+        if (!emailField.value.includes('@')) {
+            toast.error('Invalid email address', {
+                duration: 4000,
+                position: 'top-center',
+            });
+            return;
+        }
+
+        if (!subjectField.value.trim()) {
+            toast.error('Subject is required', {
+                duration: 4000,
+                position: 'top-center',
+            });
+            return;
+        }
+
+        if (!messageField.value.trim()) {
+            toast.error('Message is required', {
+                duration: 4000,
+                position: 'top-center',
+            });
+            return;
+        }
         emailjs
             .sendForm('service_o7vkoq5', 'template_tvxghyo', form.current, {
                 publicKey: '33-AaGR0BjT7TeF4N',
