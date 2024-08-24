@@ -1,7 +1,7 @@
 import { Inter, Roboto, Lato } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from 'next-themes'
-
+import * as React from "react"
+import { ThemeProvider } from "@/components/theme-provider";
 
 const roboto = Roboto({
   subsets: ['latin']
@@ -31,7 +31,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={roboto.className}>
-        <ThemeProvider attribute="class" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>

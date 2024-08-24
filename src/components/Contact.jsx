@@ -2,11 +2,14 @@
 import React, { useRef, useState } from 'react'
 import Badge from './Badge'
 import { MdOutlineMailOutline, MdOutlinePhone } from 'react-icons/md'
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi'
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { Button } from './ui/button';
+import Link from 'next/link';
+import { Github, InstagramIcon, LinkedinIcon } from 'lucide-react';
 
 const Contact = () => {
     const [phoneCopied, setPhoneCopied] = useState(false);
@@ -83,11 +86,11 @@ const Contact = () => {
     };
 
     return (
-        <div id="contact" className='flex w-full items-center justify-center flex-col bg-primary-200 py-10 gap-y-6'>
+        <div id="contact" className='flex w-full items-center justify-center flex-col bg-background py-10 gap-y-6'>
             <Toaster toastOptions={{
                 style: {
-                    backgroundColor: "var(--color-bg-third)",
-                    color: "var(--color-text-primary)"
+                    backgroundColor: "hsl(var(--background)",
+                    color: "hsl(var(--foreground)"
                 }
             }} />
             <Badge title={"Get In Touch"} style={"my-4"} />
@@ -127,21 +130,22 @@ const Contact = () => {
                     <p className='text-base text-center text-secondary-200 my-4 px-4 sm:text-left'>You may also find me on these platforms</p>
                     <div className='flex items-center justify-between w-40 mt-10'>
 
-                        <a href="https://github.com/zohaibsaeed117" target='_blank' className='active:scale-[0.9] hover:text-[#666666]'><FaGithub size={24} /></a>
-                        <a href="https://www.instagram.com/itz_zaibi_17/" target='_blank' className='active:scale-[0.9] hover:text-[#c2124c]'><FaSquareInstagram size={24} /></a>
-                        <a href="https://www.linkedin.com/in/zohaib-saeed-90184324b/" target='_blank' className='active:scale-[0.9] hover:text-[#405DE6]'><FaLinkedin size={24} /></a>
+                        <Link href="https://github.com/zohaibsaeed117" target='_blank' className='active:scale-[0.9] hover:text-[#666666] transition-color transition-transform'><Github /></Link>
+                        <Link href="https://www.instagram.com/itz_zaibi_17/" target='_blank' className='active:scale-[0.9] hover:text-[#c2124c] transition-color transition-transform'><InstagramIcon size={24} /></Link>
+                        <Link href="https://www.linkedin.com/in/zohaib-saeed-90184324b/" target='_blank' className='active:scale-[0.9] hover:text-[#405DE6] transition-color transition-transform'><LinkedinIcon size={24} /></Link>
                     </div>
                 </div>
-                <form ref={form} onSubmit={sendEmail} className='w-full lg:w-1/2 flex items-center justify-center flex-col gap-y-3 px-8 mt-8 lg:mt-0'>
-                    <input type="text" placeholder="Enter your name" name="user_name" className="input bg-primary-300 input-bordered w-full max-w-xs" />
-                    <input type="email" placeholder="Enter your Email" name="user_email" className="input bg-primary-300 input-bordered w-full max-w-xs" />
-                    <input type="text" placeholder="Enter Subject" name="subject" className="input bg-primary-300 input-bordered w-full max-w-xs" />
-                    <textarea
+                <form ref={form} onSubmit={sendEmail} className='w-full lg:w-[30%] flex items-center justify-center flex-col gap-y-3 px-8 mt-8 lg:mt-0'>
+                    <Input type="text" placeholder="Enter your name" name="user_name" className="bg-background-200 border-2 border-border" />
+                    <Input type="email" placeholder="Enter your Email" name="user_email" className="bg-background-200 border-2 border-border" />
+                    <Input type="text" placeholder="Enter Subject" name="subject" className="bg-background-200 border-2 border-border" />
+                    <Textarea
                         placeholder="Enter your message..."
                         style={{ resize: 'none' }}
                         name="message"
-                        className="textarea bg-primary-300  textarea-bordered textarea-lg w-full max-w-xs"></textarea>
-                    <input type="submit" value="Send Message" className="btn text-sm font-semibold bg-secondary-100 text-primary-100 px-3 py-2 rounded-lg  hover:bg-[#323642] dark:hover:bg-gray-200" />
+                        className="bg-background-200 border-2 border-border"
+                    />
+                    <Button type="submit" value="Send Message" >Submit</Button>
                 </form>
             </div>
         </div>

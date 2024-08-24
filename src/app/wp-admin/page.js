@@ -14,7 +14,7 @@ export default function Home() {
     }
     return (
         <>
-            <div className="min-h-screen flex items-center justify-center bg-primary-100">
+            <div className="min-h-screen flex items-center justify-center bg-background-100">
                 {
                     state ?
                         <Image src="/meme.jpeg"
@@ -22,7 +22,7 @@ export default function Home() {
                             width={400}
                             priority={true}
                         />
-                        : <div className="bg-primary-200 p-8 rounded-lg shadow-md w-full max-w-md">
+                        : <div className="bg-background p-8 rounded-lg shadow-md w-full max-w-md">
                             <div className="flex justify-center mb-6">
                                 <img src="/wordpress.png" alt="WordPress Logo" className="h-12" />
                             </div>

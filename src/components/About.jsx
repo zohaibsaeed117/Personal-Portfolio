@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const About = () => {
     return (
-        <div id="about" className='flex items-center justify-center flex-col bg-primary-200 py-10 gap-y-6'>
+        <div id="about" className='flex items-center justify-center flex-col bg-background-200 py-10 gap-y-6'>
             <Badge title={"About Me"} style={'my-4 px-4'} />
             <div className='flex flex-col items-center justify-center mx-10 lg:flex-row'>
                 <div className="w-full lg:w-1/2 flex items-center justify-center">

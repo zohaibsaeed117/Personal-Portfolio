@@ -1,8 +1,9 @@
 import React from 'react'
+import { Badge as BadgeComponent } from '@/components/ui/badge'
 
 const Badge = ({ title, style }) => {
     return (
-        <div className={`badge badge-lg bg-primary-100 py-4 px-6 text-secondary-200 text-base shadow-md ${style}`}>{title}</div>
+        <BadgeComponent className={style}>{title}</BadgeComponent>
 
     )
 }
