@@ -18,7 +18,7 @@ const Projects = () => {
             description: "I crafted a dynamic social media platform that enables users to seamlessly add, like, comment on, and delete posts, providing an engaging user experience. To elevate user interaction and satisfaction, I engineered an intuitive and visually appealing frontend using Tailwind CSS and DaisyUI. Additionally, I orchestrated robust backend development with Next.js and MongoDB, ensuring efficient data management and seamless server operations.",
             tools: ["React Js", "Next JS", "Tailwind CSS", "MongoDB", "Node JS", "DaisyUI"],
             path: "sycofusion.png",
-            link: "https://github.com/zohaibsaeed117/SycoFusion"
+            link: "https://github.com/zohaibsaeed117/sycofusion-client.git"
         },
         {
             id: 3,
