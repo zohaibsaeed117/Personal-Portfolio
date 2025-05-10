@@ -107,8 +107,8 @@ const Hero = () => {
       {/* Animated Background */}
       {/* <BackgroundBeams /> */}
       <Waves
-        lineColor={theme === "dark" ? "#0F1933" : "#EBEBEB"}
-        backgroundColor={theme === "dark" ? "#020817" : "#D8D4D4"}
+        lineColor={theme === "dark" ? "#0F1933" : "#D8D4D4"}
+        backgroundColor={theme === "dark" ? "#020817" : "#EBEBEB"}
         waveSpeedX={0.02}
         waveSpeedY={0.01}
         waveAmpX={40}
