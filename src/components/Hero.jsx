@@ -4,14 +4,25 @@ import { CiLocationOn } from "react-icons/ci";
 import StyledImage from './StyledImage';
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import Link from 'next/link';
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Typewriter } from 'react-simple-typewriter';
+import Waves from './ui/waves';
+import { useTheme } from 'next-themes';
+
 
 const Hero = () => {
+  const { resolvedTheme: theme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
       <div className='flex items-center justify-between min-h-[80vh] mt-20 flex-col-reverse pb-10 lg:flex-row lg:justify-around lg:my-10 lg:py-10 relative z-10'>
-        
+
         {/* LEFT SIDE */}
         <div className='w-full mt-8 lg:mt-0 lg:w-[60%]'>
           {/* Heading */}
@@ -34,12 +45,12 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-base mt-6 text-secondary-200 text-center lg:text-lg lg:text-left leading-relaxed">
-            I'm a <span className="text-primary font-medium">Full-Stack Web developer</span> specializing in the 
-            <span className="text-primary font-medium"> MERN stack</span> — <span className="text-primary">React.js</span>, 
-            <span className="text-primary"> Node.js</span>, <span className="text-primary">Express.js</span>, and 
-            <span className="text-primary"> MongoDB</span>. I love building 
-            <span className="text-primary font-medium"> fast</span>, <span className="text-primary font-medium">responsive</span>, 
-            and <span className="text-primary font-medium">accessible</span> web apps with clean UI using 
+            I'm a <span className="text-primary font-medium">Full-Stack Web developer</span> specializing in the
+            <span className="text-primary"> MERN stack</span> — <span className="text-primary">React.js</span>,
+            <span className="text-primary"> Node.js</span>, <span className="text-primary">Express.js</span>, and
+            <span className="text-primary"> MongoDB</span>. I love building
+            <span className="text-primary font-medium"> fast</span>, <span className="text-primary font-medium">responsive</span>,
+            and <span className="text-primary font-medium">accessible</span> web apps with clean UI using
             <span className="text-primary"> Tailwind CSS</span> and <span className="text-primary">Next.js</span>. Always learning, always building.
           </p>
 
@@ -94,9 +105,23 @@ const Hero = () => {
       </div>
 
       {/* Animated Background */}
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
+      <Waves
+        lineColor={theme === "dark" ? "#0F1933" : "#EBEBEB"}
+        backgroundColor={theme === "dark" ? "#020817" : "#D8D4D4"}
+        waveSpeedX={0.02}
+        waveSpeedY={0.01}
+        waveAmpX={40}
+        waveAmpY={20}
+        friction={0.9}
+        tension={0.01}
+        maxCursorMove={120}
+        xGap={12}
+        yGap={36}
+      />
     </div>
   );
 };
 
 export default Hero;
+
