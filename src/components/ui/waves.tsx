@@ -227,8 +227,12 @@ const Waves: React.FC<WavesProps> = ({
     xGap,
     yGap,
   ]);
-
+  const [mounted, setMounted] = React.useState(false)
   useEffect(() => {
+    setMounted(true)
+  }, [])
+  useEffect(() => {
+    if (!mounted) return
     const canvas = canvasRef.current;
     const container = containerRef.current;
     if (!canvas || !container) return;
@@ -415,8 +419,8 @@ const Waves: React.FC<WavesProps> = ({
         cancelAnimationFrame(frameIdRef.current);
       }
     };
-  }, []);
-
+  }, [mounted]);
+  if (!mounted) return null;
   return (
     <div
       ref={containerRef}
