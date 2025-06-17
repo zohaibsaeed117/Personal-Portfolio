@@ -8,9 +8,9 @@ export const projectsData = [
             "A Next.js application that automatically generates README files for GitHub repositories. It analyzes the repository's code, provides summaries, and creates a comprehensive README based on the project's structure and content.",
         tools: ["Next.js", "TypeScript", "Tailwind CSS", "ShadCN UI", "Next-Auth", "Mongo DB", "Gemini Flash 2.0"],
         path: "ai-readme-maker.png",
-        link: "ai-readme-maker.com",
+        link: "https://ai-readme-maker.com",
         github: "",
-        category: "web",
+        category: "fullstack",
         featured: true,
         status: "completed",
         year: "2025",
@@ -29,7 +29,7 @@ export const projectsData = [
         category: "web",
         featured: true,
         status: "completed",
-        year: "2024",
+        year: "2025",
     },
     {
         id: 3,
@@ -43,7 +43,7 @@ export const projectsData = [
         link: "",
         github: "https://github.com/zohaibsaeed117/sycofusion-client.git",
         category: "fullstack",
-        featured: true,
+        featured: false,
         status: "completed",
         year: "2024",
     },
@@ -54,7 +54,7 @@ export const projectsData = [
             "React Native mobile app delivering accurate prayer times with push notifications and offline support.",
         description:
             "Engineered a React Native application for the Faizan-e-Chisht Organization, delivering accurate prayer times and notifications for the next prayer, thereby enriching the user's religious practice experience. By leveraging Expo for development and NativeWind for styling, I ensured seamless functionality and a user-friendly interface.",
-        tools: ["React Native", "Expo", "NativeWind", "JavaScript", "Mobile Development", "Push Notifications"],
+        tools: ["React Native", "Expo", "NativeWind", "JavaScript", "Mobile Development"],
         path: "prayerapp1.png",
         link: "https://faizan-e-chist-server.vercel.app/faizan-e-chist.apk",
         github: "",
@@ -83,7 +83,30 @@ export const projectsData = [
         "featured": true,
         "status": "in-progress",
         "year": "2025"
+    },
+    {
+        "id": 6,
+        "title": "Ticket-Master",
+        "shortDescription": "A modern web app for seamless ticket booking across buses, trains, flights, movies, and events.",
+        "description": "Ticket-Master is a full-featured web application developed as a semester project to streamline the process of booking and managing tickets for various services. Built using Next.js and TypeScript, it includes user authentication, a powerful admin dashboard, and optimized performance features like debouncing and image optimization. The platform ensures a responsive and accessible user experience using Radix UI, Tailwind CSS, Zustand, and Shadcn UI.",
+        "tools": [
+            "Next.js",
+            "TypeScript",
+            "React",
+            "Tailwind CSS",
+            "Zustand",
+            "Shadcn UI",
+            "Radix UI"
+        ],
+        "path": "ticketmaster.png",
+        "link": "",
+        "github": "https://github.com/zohaibsaeed117/ticket-master",
+        "category": "fullstack",
+        "featured": false,
+        "status": "completed",
+        "year": "2025"
     }
+
 
 ]
 

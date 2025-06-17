@@ -19,7 +19,7 @@ const Navbar = () => {
             gsap.set(navRef.current, { y: -100, opacity: 0 })
             gsap.set(logoRef.current, { x: 0, opacity: 1 }) // Make sure logo is visible
             gsap.set(navItemsRef.current?.children || [], { y: 0, opacity: 1 })
-            
+
             const tl = gsap.timeline()
 
             tl.to(navRef.current, {
@@ -115,7 +115,7 @@ const Navbar = () => {
     return (
         <div
             ref={navRef}
-            className="fixed top-0 left-0 z-50 bg-background/80 backdrop-blur-md text-foreground flex w-full justify-between font-roboto py-4 shadow-md"
+            className="fixed top-0 left-0 z-50 bg-background/80 backdrop-blur-md text-foreground flex w-screen justify-between font-roboto py-4 shadow-md"
         >
             <h1
                 ref={logoRef}

@@ -211,7 +211,7 @@ const Hero = () => {
               href="https://github.com/zohaibsaeed117"
               target="_blank"
               title="GitHub"
-              className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg"
+              className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg hover:text-[#666666]"
               onMouseEnter={handleSocialHover}
               onMouseLeave={handleSocialLeave}
             >
@@ -221,7 +221,7 @@ const Hero = () => {
               href="https://www.instagram.com/itz_zaibi_17/"
               target="_blank"
               title="Instagram"
-              className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg"
+              className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg hover:text-[#c2124c]"
               onMouseEnter={handleSocialHover}
               onMouseLeave={handleSocialLeave}
             >
@@ -231,7 +231,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/zohaib-saeed-90184324b/"
               target="_blank"
               title="LinkedIn"
-              className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg"
+              className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg hover:text-[#405DE6]"
               onMouseEnter={handleSocialHover}
               onMouseLeave={handleSocialLeave}
             >

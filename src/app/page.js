@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen overflow-hidden">
       <Navbar />
       <Hero />
       <About />
@@ -16,6 +16,6 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
