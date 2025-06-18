@@ -18,7 +18,6 @@ gsap.registerPlugin(ScrollTrigger)
 const Contact = () => {
   const [phoneCopied, setPhoneCopied] = useState(false)
   const [emailCopied, setEmailCopied] = useState(false)
-  const form = useRef()
 
   const contactRef = useRef(null)
   const badgeRef = useRef(null)
@@ -182,53 +181,43 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
-    const nameField = form.current.elements.user_name
-    const emailField = form.current.elements.user_email
-    const subjectField = form.current.elements.subject
-    const messageField = form.current.elements.message
 
-    // Perform validation checks
-    if (!nameField.value.trim()) {
-      toast.error("Name is required", {
-        duration: 4000,
-        position: "top-center",
-      })
+    const formEl = formRef.current
+    if (!formEl) {
+      toast.error("Form not found.")
       return
     }
 
-    if (!emailField.value.trim()) {
-      toast.error("Email is required", {
-        duration: 4000,
-        position: "top-center",
-      })
+    const nameField = formEl.elements.user_name
+    const emailField = formEl.elements.user_email
+    const subjectField = formEl.elements.subject
+    const messageField = formEl.elements.message
+
+    if (!nameField?.value.trim()) {
+      toast.error("Name is required")
+      return
+    }
+
+    if (!emailField?.value.trim()) {
+      toast.error("Email is required")
       return
     }
 
     if (!emailField.value.includes("@")) {
-      toast.error("Invalid email address", {
-        duration: 4000,
-        position: "top-center",
-      })
+      toast.error("Invalid email address")
       return
     }
 
-    if (!subjectField.value.trim()) {
-      toast.error("Subject is required", {
-        duration: 4000,
-        position: "top-center",
-      })
+    if (!subjectField?.value.trim()) {
+      toast.error("Subject is required")
       return
     }
 
-    if (!messageField.value.trim()) {
-      toast.error("Message is required", {
-        duration: 4000,
-        position: "top-center",
-      })
+    if (!messageField?.value.trim()) {
+      toast.error("Message is required")
       return
     }
 
-    // Animate submit button
     gsap.to(e.target, {
       scale: 0.95,
       duration: 0.1,
@@ -236,26 +225,18 @@ const Contact = () => {
       repeat: 1,
       ease: "power2.inOut",
     })
-
     emailjs
-      .sendForm("service_o7vkoq5", "template_mgg0f4d", form.current, {
+      .sendForm("service_o7vkoq5", "template_tvxghyo", formEl, {
         publicKey: "33-AaGR0BjT7TeF4N",
       })
       .then(
         () => {
-          console.log("SUCCESS!")
-          toast.success("Message send successfully!", {
-            duration: 4000,
-            position: "top-center",
-          })
-          form.current.reset()
+          toast.success("Message sent successfully!")
+          formEl.reset()
         },
         (error) => {
-          toast.error("Failed to send message", {
-            duration: 4000,
-            position: "top-center",
-          })
-          console.log("FAILED...", error.text)
+          toast.error("Failed to send message")
+          console.error("FAILED...", error)
         },
       )
   }
@@ -361,7 +342,7 @@ const Contact = () => {
             <Link
               href="https://github.com/zohaibsaeed117"
               target="_blank"
-              className="active:scale-[0.9] hover:text-[#666666] transition-color transition-transform"
+              className="active:scale-[0.9] hover:text-[#666666] transition-color transition-"
               onMouseEnter={handleSocialHover}
               onMouseLeave={handleSocialLeave}
             >
