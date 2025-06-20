@@ -56,7 +56,7 @@ export const projectsData = [
             "Engineered a React Native application for the Faizan-e-Chisht Organization, delivering accurate prayer times and notifications for the next prayer, thereby enriching the user's religious practice experience. By leveraging Expo for development and NativeWind for styling, I ensured seamless functionality and a user-friendly interface.",
         tools: ["React Native", "Expo", "NativeWind", "JavaScript", "Mobile Development"],
         path: "prayerapp1.png",
-        link: "https://faizan-e-chist-server.vercel.app/faizan-e-chist.apk",
+        link: "https://play.google.com/store/apps/details?id=com.itz_zaibi_17.FaizaneChisht&pcampaignid=web_share",
         github: "",
         category: "mobile",
         featured: false,
@@ -77,7 +77,7 @@ export const projectsData = [
             "GSAP"
         ],
         "path": "najam-portfolio.png",
-        "link": "",
+        "link": "https://www.najamulhassan.com",
         "github": "",
         "category": "web",
         "featured": true,
