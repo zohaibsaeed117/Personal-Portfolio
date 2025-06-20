@@ -81,7 +81,7 @@ export const projectsData = [
         "github": "",
         "category": "web",
         "featured": true,
-        "status": "in-progress",
+        "status": "completed",
         "year": "2025"
     },
     {
