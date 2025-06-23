@@ -84,23 +84,37 @@ export const projectsData = [
         "status": "completed",
         "year": "2025"
     },
+    // {
+    //     "id": 6,
+    //     "title": "Ticket-Master",
+    //     "shortDescription": "A modern web app for seamless ticket booking across buses, trains, flights, movies, and events.",
+    //     "description": "Ticket-Master is a full-featured web application developed as a semester project to streamline the process of booking and managing tickets for various services. Built using Next.js and TypeScript, it includes user authentication, a powerful admin dashboard, and optimized performance features like debouncing and image optimization. The platform ensures a responsive and accessible user experience using Radix UI, Tailwind CSS, Zustand, and Shadcn UI.",
+    //     "tools": [
+    //         "Next.js",
+    //         "TypeScript",
+    //         "React",
+    //         "Tailwind CSS",
+    //         "Zustand",
+    //         "Shadcn UI",
+    //         "Radix UI"
+    //     ],
+    //     "path": "ticketmaster.png",
+    //     "link": "",
+    //     "github": "https://github.com/zohaibsaeed117/ticket-master",
+    //     "category": "fullstack",
+    //     "featured": false,
+    //     "status": "completed",
+    //     "year": "2025"
+    // }
     {
-        "id": 6,
-        "title": "Ticket-Master",
-        "shortDescription": "A modern web app for seamless ticket booking across buses, trains, flights, movies, and events.",
-        "description": "Ticket-Master is a full-featured web application developed as a semester project to streamline the process of booking and managing tickets for various services. Built using Next.js and TypeScript, it includes user authentication, a powerful admin dashboard, and optimized performance features like debouncing and image optimization. The platform ensures a responsive and accessible user experience using Radix UI, Tailwind CSS, Zustand, and Shadcn UI.",
-        "tools": [
-            "Next.js",
-            "TypeScript",
-            "React",
-            "Tailwind CSS",
-            "Zustand",
-            "Shadcn UI",
-            "Radix UI"
-        ],
-        "path": "ticketmaster.png",
+        "id": 7,
+        "title": "Network Traffic Analysis Dashboard",
+        "shortDescription": "Real-time dashboard for monitoring and analyzing network traffic with interactive filters and IDS control.",
+        "description": "A frontend web application built with Next.js for real-time network traffic monitoring. It connects to an IDS backend, allowing users to view live flows, control packet sniffing, and apply filters to analyze traffic based on source, destination, protocol, classification, and risk.",
+        "tools": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+        "path": "ids.jpeg",
         "link": "",
-        "github": "https://github.com/zohaibsaeed117/ticket-master",
+        "github": "https://github.com/zohaibsaeed117/Intrusion-Detection-System-Dashboard",
         "category": "fullstack",
         "featured": false,
         "status": "completed",
