@@ -8,7 +8,7 @@ export const projectsData = [
             "A Next.js application that automatically generates README files for GitHub repositories. It analyzes the repository's code, provides summaries, and creates a comprehensive README based on the project's structure and content.",
         tools: ["Next.js", "TypeScript", "Tailwind CSS", "ShadCN UI", "Next-Auth", "Mongo DB", "Gemini Flash 2.0"],
         path: "ai-readme-maker.png",
-        link: "https://ai-readme-maker.com",
+        link: "https://zohaib-saeed.vercel.app/",
         github: "",
         category: "fullstack",
         featured: true,
