@@ -153,6 +153,16 @@ const Navbar = () => {
                     <li>
                         <a
                             className="hover:text-foreground/60 transition-colors cursor-pointer"
+                            href="#experience"
+                            onMouseEnter={handleNavItemHover}
+                            onMouseLeave={handleNavItemLeave}
+                        >
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className="hover:text-foreground/60 transition-colors cursor-pointer"
                             href="#skills"
                             onMouseEnter={handleNavItemHover}
                             onMouseLeave={handleNavItemLeave}
@@ -185,7 +195,7 @@ const Navbar = () => {
                 <div ref={actionsRef} className="flex items-center justify-center gap-x-2 mx-2">
                     <ThemeController />
                     <Button>
-                        <Link href="\Zohaib Saeed.pdf" rel="noopener noreferrer" target="_blank">
+                        <Link href="/zohaib-saeed-cv.pdf" rel="noopener noreferrer" target="_blank">
                             Download CV
                         </Link>
                     </Button>

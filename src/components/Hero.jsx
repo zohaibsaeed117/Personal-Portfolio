@@ -164,7 +164,7 @@ const Hero = () => {
           <h2 ref={typewriterRef} className="text-lg text-primary mt-3 font-medium text-center lg:text-left">
             I am{" "}
             <Typewriter
-              words={["a MERN Stack Developer", "Next.js Developer", "exploring React Native"]}
+              words={["an Associate Software Engineer", "a Full-Stack Developer", "a Mobile App Developer"]}
               loop
               cursor
               cursorStyle="_"
@@ -179,15 +179,12 @@ const Hero = () => {
             ref={descriptionRef}
             className="text-base mt-6 text-secondary-200 text-center lg:text-lg lg:text-left leading-relaxed"
           >
-            I'm a <span className="text-primary font-medium">Full-Stack Web developer</span> specializing in the
-            <span className="text-primary"> MERN stack</span> — <span className="text-primary">React.js</span>,
-            <span className="text-primary"> Node.js</span>, <span className="text-primary">Express.js</span>, and
-            <span className="text-primary"> MongoDB</span>. I love building
-            <span className="text-primary font-medium"> fast</span>,{" "}
-            <span className="text-primary font-medium">responsive</span>, and{" "}
-            <span className="text-primary font-medium">accessible</span> web apps with clean UI using
-            <span className="text-primary"> Tailwind CSS</span> and <span className="text-primary">Next.js</span>.
-            Always learning, always building.
+            I'm an <span className="text-primary font-medium">Associate Software Engineer</span> at{" "}
+            <span className="text-primary">Xavinex</span>, building full-stack and mobile products end-to-end —
+            <span className="text-primary"> React Native</span> and <span className="text-primary">Expo</span> on
+            mobile, <span className="text-primary">Next.js</span>, <span className="text-primary">Node.js</span>,
+            and <span className="text-primary">MongoDB</span> on the web. Always
+            learning, always building.
           </p>
 
           {/* Location & Availability */}
@@ -228,7 +225,7 @@ const Hero = () => {
               <Instagram size={20} />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/zohaib-saeed-90184324b/"
+              href="https://www.linkedin.com/in/zohaibsaeed117/"
               target="_blank"
               title="LinkedIn"
               className="p-3 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 hover:bg-muted hover:border-border transition-all duration-300 hover:shadow-lg hover:text-[#405DE6]"

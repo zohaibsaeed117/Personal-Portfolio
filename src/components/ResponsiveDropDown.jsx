@@ -1,4 +1,5 @@
 import {
+    Briefcase,
     Cloud,
     CreditCard,
     FolderKanban,
@@ -49,6 +50,10 @@ export default function ResponsiveDropDown() {
                         <Link href="#about">About</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
+                        <Briefcase className="mr-2 h-4 w-4" />
+                        <Link href="#experience">Experience</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
                         <FolderKanban className="mr-2 h-4 w-4" />
                         <Link href="#skills">Skills</Link>
                     </DropdownMenuItem>
@@ -61,7 +66,7 @@ export default function ResponsiveDropDown() {
                         <Link href="#contact">Contact</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem className="w-full">
-                        <Link className={buttonVariants({ variant: "default", size: "sm" })} href="\Zohaib Saeed.pdf" rel="noopener noreferrer" target="_blank">Download Resume</Link>
+                        <Link className={buttonVariants({ variant: "default", size: "sm" })} href="/zohaib-saeed-cv.pdf" rel="noopener noreferrer" target="_blank">Download Resume</Link>
                     </DropdownMenuItem>
                 </DropdownMenuGroup>
             </DropdownMenuContent >

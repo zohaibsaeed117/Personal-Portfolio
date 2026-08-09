@@ -211,7 +211,7 @@ const ProjectCard = ({ project, index = 0 }) => {
         <div className="flex items-center justify-between pt-2">
           <div className="flex items-center gap-2">
             <div
-              className={`w-2 h-2 rounded-full ${project.status === "completed" ? "bg-green-500" : project.status === "in-progress" ? "bg-yellow-500" : "bg-gray-400"}`}
+              className={`w-2 h-2 rounded-full ${project.status === "completed" ? "bg-green-500" : project.status === "in-progress" || project.status === "internal-testing" ? "bg-yellow-500" : "bg-gray-400"}`}
             />
             <span className="text-xs text-muted-foreground capitalize">{project.status.replace("-", " ")}</span>
           </div>

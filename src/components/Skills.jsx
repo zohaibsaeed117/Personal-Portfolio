@@ -3,25 +3,51 @@
 import React, { useRef, useEffect } from 'react'
 import Badge from './Badge'
 import Image from "next/image"
+import { SiReact, SiExpo } from "react-icons/si"
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const skillGroups = [
+    {
+        title: "Frontend",
+        skills: [
+            { path: "html", name: "HTML" }, { path: "css", name: "CSS" }, { path: "js", name: "JavaScript" },
+            { path: "tailwindcss", name: "Tailwind CSS" }, { path: "bootstrap", name: "Bootstrap" },
+            { path: "reactjs", name: "React Js" }, { path: "nextjs", name: "Next Js" },
+        ],
+    },
+    {
+        title: "Mobile",
+        skills: [
+            { icon: SiReact, name: "React Native" },
+            { icon: SiExpo, name: "Expo" },
+            { path: "tailwindcss", name: "NativeWind" },
+        ],
+    },
+    {
+        title: "Backend",
+        skills: [
+            { path: "nodejs", name: "Node Js" }, { path: "mongodb", name: "MongoDB" },
+            { path: "mssql", name: "SQL Server" }, { path: "mysql", name: "My SQL" },
+            { path: "python", name: "Python" },
+        ],
+    },
+    {
+        title: "Tools",
+        skills: [
+            { path: "c", name: "C" }, { path: "cpp", name: "C++" },
+            { path: "git", name: "Git" }, { path: "github", name: "Github" },
+        ],
+    },
+]
+
 const Skills = () => {
     const skillsRef = useRef(null)
     const badgeRef = useRef(null)
     const descriptionRef = useRef(null)
-    const gridRef = useRef(null)
-
-    const logos = [
-        { path: "html", name: "HTML" }, { path: "css", name: "CSS" }, { path: "js", name: "JavaScript" },
-        { path: "tailwindcss", name: "Tailwind CSS" }, { path: "bootstrap", name: "Bootstrap" },
-        { path: "reactjs", name: "React Js" }, { path: "nextjs", name: "Next Js" }, { path: "nodejs", name: "Node Js" },
-        { path: "mongodb", name: "MongoDB" }, { path: "mssql", name: "SQL Server" }, { path: "mysql", name: "My SQL" },
-        { path: "python", name: "Python" }, { path: "c", name: "C" }, { path: "cpp", name: "C++" },
-        { name: "Git", path: "git" }, { path: "github", name: "Github" }
-    ]
+    const groupsRef = useRef(null)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -65,62 +91,62 @@ const Skills = () => {
                 }
             )
 
-            // Skills grid animation with stagger
-            gsap.fromTo(gridRef.current?.children || [],
-                {
-                    y: 50,
-                    opacity: 0,
-                    scale: 0.8,
-                    rotation: -10
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    scale: 1,
-                    rotation: 0,
-                    duration: 0.6,
-                    stagger: {
-                        amount: 1.2,
-                        from: "start",
-                        ease: "power2.out"
+            // Skills grid animation with stagger, per group
+            const groupEls = groupsRef.current?.querySelectorAll('.skill-group') || []
+            groupEls.forEach((groupEl) => {
+                const items = groupEl.querySelectorAll('.skill-item')
+
+                gsap.fromTo(items,
+                    {
+                        y: 50,
+                        opacity: 0,
+                        scale: 0.8,
+                        rotation: -10
                     },
-                    ease: "back.out(1.7)",
-                    scrollTrigger: {
-                        trigger: gridRef.current,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    }
-                }
-            )
-
-            // Add hover animations to skill items
-            const skillItems = gridRef.current?.children || []
-            Array.from(skillItems).forEach((item) => {
-                const handleMouseEnter = () => {
-                    gsap.to(item, {
-                        scale: 1.15,
-                        y: -10,
-                        duration: 0.3,
-                        ease: "back.out(1.7)"
-                    })
-                }
-
-                const handleMouseLeave = () => {
-                    gsap.to(item, {
-                        scale: 1,
+                    {
                         y: 0,
-                        duration: 0.3,
-                        ease: "back.out(1.7)"
-                    })
-                }
+                        opacity: 1,
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.6,
+                        stagger: {
+                            amount: 0.8,
+                            from: "start",
+                            ease: "power2.out"
+                        },
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: groupEl,
+                            start: "top 85%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                )
 
-                item.addEventListener('mouseenter', handleMouseEnter)
-                item.addEventListener('mouseleave', handleMouseLeave)
+                items.forEach((item) => {
+                    const handleMouseEnter = () => {
+                        gsap.to(item, {
+                            scale: 1.15,
+                            y: -10,
+                            duration: 0.3,
+                            ease: "back.out(1.7)"
+                        })
+                    }
 
-                // Cleanup function will be handled by gsap.context
+                    const handleMouseLeave = () => {
+                        gsap.to(item, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.3,
+                            ease: "back.out(1.7)"
+                        })
+                    }
+
+                    item.addEventListener('mouseenter', handleMouseEnter)
+                    item.addEventListener('mouseleave', handleMouseLeave)
+                })
             })
-
         }, skillsRef)
 
         return () => ctx.revert()
@@ -136,12 +162,18 @@ const Skills = () => {
                 The skills, tools and technologies I am really good at:
             </p>
 
-            <div
-                ref={gridRef}
-                className='grid grid-cols-3 gap-8 w-3/4 md:grid-cols-6 sm:grid-cols-4 lg:grid-cols-8'
-            >
-                {logos.map((logo, index) => (
-                    <Logo key={logo.name + index} path={logo.path} name={logo.name} />
+            <div ref={groupsRef} className='w-3/4 flex flex-col gap-y-10'>
+                {skillGroups.map((group) => (
+                    <div key={group.title} className='skill-group flex flex-col items-center gap-y-6'>
+                        <h3 className='text-base font-semibold text-secondary-100 md:text-lg tracking-wide uppercase'>
+                            {group.title}
+                        </h3>
+                        <div className='grid grid-cols-3 gap-8 w-full md:grid-cols-6 sm:grid-cols-4 lg:grid-cols-8'>
+                            {group.skills.map((skill, index) => (
+                                <Logo key={skill.name + index} path={skill.path} icon={skill.icon} name={skill.name} />
+                            ))}
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>
@@ -150,24 +182,28 @@ const Skills = () => {
 
 export default Skills
 
-const Logo = ({ path, name }) => {
+const Logo = ({ path, icon: Icon, name }) => {
     const logoRef = useRef(null)
 
     return (
         <div
             ref={logoRef}
-            className='mx-auto flex items-center justify-center flex-col gap-y-2 cursor-pointer'
+            className='skill-item mx-auto flex items-center justify-center flex-col gap-y-2 cursor-pointer'
         >
-            <Image
-                src={`/skills/${path}.png`}
-                alt={name}
-                height={100}
-                width={100}
-                className='object-contain aspect-square h-12 md:h-20 sm:h-16 lg:h-24 transition ease-in-out duration-300'
-                blurDataURL='true'
-                placeholder='blur'
-                loading="lazy"
-            />
+            {Icon ? (
+                <Icon className='object-contain aspect-square h-12 w-12 md:h-20 md:w-20 sm:h-16 sm:w-16 lg:h-24 lg:w-24 text-secondary-100 transition ease-in-out duration-300' />
+            ) : (
+                <Image
+                    src={`/skills/${path}.png`}
+                    alt={name}
+                    height={100}
+                    width={100}
+                    className='object-contain aspect-square h-12 md:h-20 sm:h-16 lg:h-24 transition ease-in-out duration-300'
+                    blurDataURL='true'
+                    placeholder='blur'
+                    loading="lazy"
+                />
+            )}
             <span className='text-sm text-secondary-100 md:text-xl sm:text-base'>{name}</span>
         </div>
     )

@@ -198,23 +198,24 @@ const About = () => {
 
                     <div ref={paragraphsRef} className="space-y-4">
                         <p className="leading-relaxed">
-                            I'm Zohaib Saeed, a web developer and a 6th semester Computer Science student at UET. My journey began
-                            with curiosity and zero background in web development—but over the last two years, I've grown deeply
-                            passionate about building modern, user-friendly websites.
+                            I'm Zohaib Saeed, an Associate Software Engineer at Xavinex — promoted from Intern in just three months
+                            — and a final-year Computer Science student at UET (2022–2026). What started as curiosity and zero
+                            background in web development has grown into real production experience shipping software people
+                            actually use.
                         </p>
                         <p className="leading-relaxed">
-                            My core strength lies in the MERN stack, especially React.js and Tailwind CSS, where I've built multiple
-                            scalable and responsive web apps. I have solid hands-on experience with Node.js and Express.js and am
-                            currently diving deeper into Next.js to push my full-stack capabilities further.
+                            I work across the stack and across platforms: React Native and Expo on mobile, alongside Next.js,
+                            Node.js, Express.js, and MongoDB on the web. I like owning a feature end-to-end, from the mobile UI down
+                            to the API and database that back it.
                         </p>
                         <p className="leading-relaxed">
-                            I'm also exploring the world of Artificial Intelligence and Machine Learning, with a growing interest in
-                            Natural Language Processing (NLP). I have foundational knowledge of Data Science and am actively working
-                            on AI-based projects while expanding my understanding of this exciting field.
+                            At Xavinex I've delivered 10+ projects across web and mobile — production deployments with AWS
+                            Amplify and Docker, offline-first mobile apps, and reviving legacy platforms. Outside of work, I've
+                            also published a live app on the Google Play Store as a solo project.
                         </p>
                         <p className="leading-relaxed">
-                            Beyond coding, I enjoy playing chess, exploring new tech on Instagram, and leading the technical domain in
-                            the MLSA society at UET. I've mentored students in web development and co-hosted several hands-on
+                            Beyond coding, I enjoy playing chess, exploring new tech on Instagram, and leading the AWS Student
+                            Builder Group at UET. I've mentored students in web development and co-hosted several hands-on
                             workshops and events to share knowledge with the community.
                         </p>
                     </div>
@@ -226,23 +227,23 @@ const About = () => {
                     <ul ref={listRef} className="list-disc list-inside text-left space-y-2 ml-4 lg:ml-0">
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Always eager to learn and grow in tech.</span>
+                            <span>Final-year Computer Science student at UET (2022–2026).</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Specializing in Next.js, React Js, Node Js and Tailwind CSS.</span>
+                            <span>Associate Software Engineer at Xavinex — promoted from Intern in 3 months.</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Diving into AI, ML, NLP, and Data Science.</span>
+                            <span>Building full-stack (Next.js/Node/MongoDB) and mobile (React Native/Expo) products.</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Technical lead at MLSA and mentor to juniors.</span>
+                            <span>One live app on the Google Play Store, with more in internal testing.</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Regular participant in web hackathons and tech events.</span>
+                            <span>Leads the AWS Student Builder Group at UET.</span>
                         </li>
                     </ul>
 

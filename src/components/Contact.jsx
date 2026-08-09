@@ -358,7 +358,7 @@ const Contact = () => {
               <InstagramIcon size={24} />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/zohaib-saeed-90184324b/"
+              href="https://www.linkedin.com/in/zohaibsaeed117/"
               target="_blank"
               className="active:scale-[0.9] hover:text-[#405DE6] transition-color transition-transform"
               onMouseEnter={handleSocialHover}
