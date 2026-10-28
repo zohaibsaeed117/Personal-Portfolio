@@ -164,7 +164,7 @@ const Hero = () => {
           <h2 ref={typewriterRef} className="text-lg text-primary mt-3 font-medium text-center lg:text-left">
             I am{" "}
             <Typewriter
-              words={["an Associate Software Engineer", "a Full-Stack Developer", "a Mobile App Developer"]}
+              words={["an Associate Mobile App Developer", "a React Native Developer", "a Full-Stack Developer"]}
               loop
               cursor
               cursorStyle="_"
@@ -179,8 +179,8 @@ const Hero = () => {
             ref={descriptionRef}
             className="text-base mt-6 text-secondary-200 text-center lg:text-lg lg:text-left leading-relaxed"
           >
-            I'm an <span className="text-primary font-medium">Associate Software Engineer</span> at{" "}
-            <span className="text-primary">Xavinex</span>, building full-stack and mobile products end-to-end —
+            I'm an <span className="text-primary font-medium">Associate Mobile App Developer</span> at{" "}
+            <span className="text-primary">Codev</span>, building mobile apps and the APIs behind them —
             <span className="text-primary"> React Native</span> and <span className="text-primary">Expo</span> on
             mobile, <span className="text-primary">Next.js</span>, <span className="text-primary">Node.js</span>,
             and <span className="text-primary">MongoDB</span> on the web. Always

@@ -198,8 +198,9 @@ const About = () => {
 
                     <div ref={paragraphsRef} className="space-y-4">
                         <p className="leading-relaxed">
-                            I'm Zohaib Saeed, an Associate Software Engineer at Xavinex — promoted from Intern in just three months
-                            — and a final-year Computer Science student at UET (2022–2026). What started as curiosity and zero
+                            I'm Zohaib Saeed, an Associate Mobile App Developer at Codev and a Computer Science graduate from UET
+                            (2022–2026). Before Codev, I spent a year at Xavinex, where I was promoted from Intern to Associate
+                            Software Engineer in just three months. What started as curiosity and zero
                             background in web development has grown into real production experience shipping software people
                             actually use.
                         </p>
@@ -209,13 +210,15 @@ const About = () => {
                             to the API and database that back it.
                         </p>
                         <p className="leading-relaxed">
-                            At Xavinex I've delivered 10+ projects across web and mobile — production deployments with AWS
-                            Amplify and Docker, offline-first mobile apps, and reviving legacy platforms. Outside of work, I've
+                            At Codev I build and ship mobile apps for company, client, and internal projects — integrating APIs,
+                            authentication, and third-party services, and supporting App Store and Play Store releases. At
+                            Xavinex I delivered 10+ projects across web and mobile — production deployments with AWS Amplify and
+                            Docker, offline-first mobile apps, and reviving legacy platforms. Outside of work, I've
                             also published a live app on the Google Play Store as a solo project.
                         </p>
                         <p className="leading-relaxed">
-                            Beyond coding, I enjoy playing chess, exploring new tech on Instagram, and leading the AWS Student
-                            Builder Group at UET. I've mentored students in web development and co-hosted several hands-on
+                            Beyond coding, I enjoy playing chess, exploring new tech on Instagram, and serving as Technical Head
+                            of the AWS Student Builder Group at UET. I've mentored students in web development and co-hosted several hands-on
                             workshops and events to share knowledge with the community.
                         </p>
                     </div>
@@ -227,15 +230,15 @@ const About = () => {
                     <ul ref={listRef} className="list-disc list-inside text-left space-y-2 ml-4 lg:ml-0">
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Final-year Computer Science student at UET (2022–2026).</span>
+                            <span>Computer Science graduate from UET (2022–2026).</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Associate Software Engineer at Xavinex — promoted from Intern in 3 months.</span>
+                            <span>Associate Mobile App Developer at Codev, shipping apps to the App Store and Play Store.</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Building full-stack (Next.js/Node/MongoDB) and mobile (React Native/Expo) products.</span>
+                            <span>Previously at Xavinex — promoted from Intern to Associate Software Engineer in 3 months.</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
@@ -243,7 +246,7 @@ const About = () => {
                         </li>
                         <li className="flex items-start gap-2">
                             <span className="text-primary mt-1">•</span>
-                            <span>Leads the AWS Student Builder Group at UET.</span>
+                            <span>Technical Head of the AWS Student Builder Group at UET.</span>
                         </li>
                     </ul>
 

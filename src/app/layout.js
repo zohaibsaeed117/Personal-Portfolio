@@ -20,8 +20,8 @@ const inter = Inter({
   variable: "--font-inter",
 })
 export const metadata = {
-  title: "Zohaib Saeed",
-  description: "Portfolio website for Zohaib Saeed",
+  title: "Zohaib Saeed – Mobile App Developer",
+  description: "Portfolio of Zohaib Saeed, Associate Mobile App Developer at Codev building React Native apps and the APIs behind them.",
 }
 
 export default function RootLayout({ children }) {

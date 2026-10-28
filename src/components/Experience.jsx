@@ -10,10 +10,27 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experience = [
     {
+        role: "Associate Mobile App Developer",
+        company: "Codev",
+        logo: "/logos/codevdigital_logo.jpg",
+        period: "Sep 2026 – Current",
+        points: [
+            "Integrated APIs and backend services into mobile applications",
+            "Implemented authentication, authorization, and database integrations",
+            "Built and maintained application UI and user-facing features",
+            "Debugged and resolved application issues and bugs",
+            "Performed application testing and troubleshooting",
+            "Worked with Git and followed version control and code review practices",
+            "Integrated third-party services and APIs",
+            "Supported application deployment and App Store / Play Store releases",
+            "Contributed to company, client, and internal software projects across mobile, web, API, and backend systems",
+        ],
+    },
+    {
         role: "Associate Software Engineer",
         company: "Xavinex",
         logo: "/logos/xavinex.png",
-        period: "Oct 2025 – Current",
+        period: "Oct 2025 – Aug 2026",
         points: [
             "Promoted from Intern to Associate Software Engineer in 3 months",
             "Built an offline-first React Native workforce management app",
